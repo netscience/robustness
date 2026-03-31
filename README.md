@@ -7,7 +7,7 @@ Este proyecto calcula la **robustez** de las redes complejas generadas por el [s
 1. **Fallas aleatorias** — eliminación aleatoria de nodos (simula fallos no intencionados)
 2. **Ataques dirigidos** — eliminación del nodo con mayor grado (hub) en cada paso
 
-Forma parte del proyecto de Ciencia de Frontera **CBF-2025-G-1812** (SECIHTI).
+Forma parte del proyecto de Ciencia de Frontera **"Modelos de reconexión para la autoorganización de redes complejas de gran escala" (CBF-2025-G-1812)**, apoyado por la Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI).
 
 ---
 
