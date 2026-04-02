@@ -7,3 +7,5 @@ __pycache__/
 *.docx
 *.DS_Store
 *.code-workspace
+*.pdf
+*.html

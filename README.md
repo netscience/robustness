@@ -2,7 +2,7 @@
 
 ## Descripción General
 
-Este proyecto de software esta disponible en para su acceso abierto en [GitHub](https://github.com/netscience/robustness) y evalúa cómo se degradan las propiedades estructurales de una red cuando se eliminan nodos progresivamente, bajo dos estrategias:
+Este proyecto de software esta disponible en para su acceso abierto en el repositorio [https://github.com/netscience/robustness](https://github.com/netscience/robustness) y evalúa cómo se degradan las propiedades estructurales de una red cuando se eliminan nodos progresivamente, bajo dos estrategias:
 
 1. **Fallas aleatorias** — eliminación aleatoria de nodos (simula fallos no intencionados)
 2. **Ataques dirigidos** — eliminación del nodo con mayor grado (hub) en cada paso
