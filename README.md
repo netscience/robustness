@@ -2,20 +2,26 @@
 
 ## Descripción General
 
-Este proyecto calcula la **robustez** de las redes complejas generadas por el [simulador de reconexión (rewiring)](file:///Users/usuario/Repositorios/rewiring). Evalúa cómo se degradan las propiedades estructurales de una red cuando se eliminan nodos progresivamente, bajo dos estrategias:
+Este proyecto de software esta disponible en para su acceso abierto en [GitHub](https://github.com/netscience/robustness) y evalúa cómo se degradan las propiedades estructurales de una red cuando se eliminan nodos progresivamente, bajo dos estrategias:
 
 1. **Fallas aleatorias** — eliminación aleatoria de nodos (simula fallos no intencionados)
 2. **Ataques dirigidos** — eliminación del nodo con mayor grado (hub) en cada paso
 
-Forma parte del proyecto de Ciencia de Frontera **"Modelos de reconexión para la autoorganización de redes complejas de gran escala" (CBF-2025-G-1812)**, apoyado por la Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI).
+El proyecto fue desarrollado para calcular la **robustez** de las redes complejas generadas por el [simulador de reconexión (rewiring)](https://github.com/netscience/rewiring) y forma parte del proyecto de Ciencia de Frontera **"Modelos de reconexión para la autoorganización de redes complejas de gran escala" (CBF-2025-G-1812)**, apoyado por la Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI).
 
 ---
 
 ## Pipeline de Ejecución
 
+Descargar el repositorio del proyecto **robustness**:
+
+```bash
+git clone https://github.com/netscience/robustness.git
+```
+
 El flujo se ejecuta en **3 pasos secuenciales**:
 
-### Paso 0: `degradacion.py` — Preparación y Ejecución
+### Paso 1: `degradacion.py` — Preparación y Ejecución
 
 Este script tiene dos funciones que se ejecutan secuencialmente al correr el archivo:
 
@@ -32,7 +38,7 @@ Este script tiene dos funciones que se ejecutan secuencialmente al correr el arc
   python hubDegradation.py graph_test_5.adjlist /ruta/carpeta/
   ```
 
-### Paso 1: `1creaPromediosDegradacion.py` — Promedios
+### Paso 2: `1creaPromediosDegradacion.py` — Promedios
 
 - Recorre recursivamente el directorio de degradación
 - Detecta carpetas con subdirectorios `1/`, `2/`, `3/` (ejecuciones)
@@ -45,7 +51,7 @@ Este script tiene dos funciones que se ejecutan secuencialmente al correr el arc
   - `datos-promedio.csv`: promedios de AvCl, ASPL, Diámetro, Orden Relativo CG, Asortatividad
   - `attr-promedio.csv`: μA2TR promedio/std y Modularidad promedio/std
 
-### Paso 2: `2creaGraficasDegradacion.py` — Tablas Consolidadas
+### Paso 3: `2creaGraficasDegradacion.py` — Tablas Consolidadas
 
 - Para cada combinación (tipo_degradación × regla × red × ruteo), consolida las métricas de todas las longitudes de enlace
 - Genera archivos CSV finales en `Medidas_degradacion/Medidas_{tipo}/`:
